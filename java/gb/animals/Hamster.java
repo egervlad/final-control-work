@@ -5,9 +5,13 @@ import gb.commands.HamsterCommands;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Hamster extends Animals implements HamsterCommands {
-    public Hamster(String name, List<String> commands, LocalDate birthDay) {
-        super(name, commands, birthDay, TypesAnimals.PETS);
+public class Hamster extends Pets implements HamsterCommands {
+    public Hamster(String name, LocalDate birthDay) {
+        super(name, birthDay, TypesAnimals.PETS);
+    }
+
+    public List<String> getPossibleCommands() {
+        return possibleCommands;
     }
 
     @Override
@@ -23,5 +27,10 @@ public class Hamster extends Animals implements HamsterCommands {
     @Override
     public void spin() {
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %s, birthday: %s, команды: %s", "Хомяк", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
     }
 }

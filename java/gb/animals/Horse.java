@@ -5,9 +5,13 @@ import gb.commands.HorseCommands;
 import java.time.LocalDate;
 import java.util.List;
 
-public class Horse extends Animals implements HorseCommands {
-    public Horse(String name, List<String> commands, LocalDate birthDay) {
-        super(name, commands, birthDay, TypesAnimals.PACK_ANIMALS);
+public class Horse extends PackAnimals implements HorseCommands {
+    public Horse(String name, LocalDate birthDay) {
+        super(name, birthDay, TypesAnimals.PACK_ANIMALS);
+    }
+
+    public List<String> getPossibleCommands() {
+        return possibleCommands;
     }
 
     @Override
@@ -22,11 +26,24 @@ public class Horse extends Animals implements HorseCommands {
 
     @Override
     public void gallop() {
-
+        if (getCommands().contains("Gallop")) {
+            System.out.println("Лошадь скачет галлопом");
+        } else {
+            System.out.println("Животное этой команде не обучено");
+        }
     }
 
     @Override
     public void jump() {
+        if (getCommands().contains("Jump")) {
+            System.out.println("Лошадь прыгает");
+        } else {
+            System.out.println("Животное этой команде не обучено");
+        }
+    }
 
+    @Override
+    public String toString() {
+        return String.format("%s: %s, birthday: %s, команды: %s", "Лошадь", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
     }
 }

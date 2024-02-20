@@ -1,5 +1,8 @@
 package gb.commands;
 
+import java.util.Arrays;
+import java.util.List;
+
 public interface DogCommands {
 
     // Sit, Stay, Fetch, Paw, Bark, Roll
@@ -11,4 +14,5 @@ public interface DogCommands {
     public void  bark();
     public void  roll();
 
+    List<String> possibleCommands = Arrays.asList("Sit", "Stay", "Fetch", "Paw", "Bark", "Roll");
 }
