@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Horse extends PackAnimals implements HorseCommands {
     public Horse(String name, LocalDate birthDay) {
-        super(name, birthDay, TypesAnimals.PACK_ANIMALS);
+        super(name, birthDay);
     }
 
     public List<String> getPossibleCommands() {

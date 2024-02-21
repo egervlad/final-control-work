@@ -8,7 +8,7 @@ import java.util.List;
 public class Cat extends Pets implements CatCommands {
 
     public Cat(String name, LocalDate birthDay) {
-        super(name, birthDay, TypesAnimals.PETS);
+        super(name, birthDay);
     }
 
     public List<String> getPossibleCommands() {

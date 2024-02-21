@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Camel extends PackAnimals implements CamelCommands {
     public Camel(String name, LocalDate birthDay) {
-        super(name, birthDay, TypesAnimals.PACK_ANIMALS);
+        super(name, birthDay);
     }
 
     public List<String> getPossibleCommands() {
