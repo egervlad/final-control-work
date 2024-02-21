@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Hamster extends Pets implements HamsterCommands {
     public Hamster(String name, LocalDate birthDay) {
-        super(name, birthDay, TypesAnimals.PETS);
+        super(name, birthDay);
     }
 
     public List<String> getPossibleCommands() {
