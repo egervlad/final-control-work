@@ -44,6 +44,6 @@ public class Horse extends PackAnimals implements HorseCommands {
 
     @Override
     public String toString() {
-        return String.format("%s: %s, birthday: %s, команды: %s", "Лошадь", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
+        return String.format("%s: %s, birthday: %s, команды: %s", "Лошадь", name, birthDay.toString(), String.join(", ", commands));
     }
 }

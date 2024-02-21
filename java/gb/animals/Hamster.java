@@ -31,6 +31,6 @@ public class Hamster extends Pets implements HamsterCommands {
 
     @Override
     public String toString() {
-        return String.format("%s: %s, birthday: %s, команды: %s", "Хомяк", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
+        return String.format("%s: %s, birthday: %s, команды: %s", "Хомяк", name, birthDay.toString(), String.join(", ", commands));
     }
 }

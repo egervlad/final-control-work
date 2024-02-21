@@ -50,6 +50,6 @@ public class Cat extends Pets implements CatCommands {
 
     @Override
     public String toString() {
-        return String.format("%s: %s, birthday: %s, команды: %s", "Котик", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
+        return String.format("%s: %s, birthday: %s, команды: %s", "Котик", name, birthDay.toString(), String.join(", ", commands));
     }
 }
