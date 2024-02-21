@@ -48,6 +48,6 @@ public class Donkey extends PackAnimals implements DonkeyCommands {
 
     @Override
     public String toString() {
-        return String.format("%s: %s, birthday: %s, команды: %s", "Осёл", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
+        return String.format("%s: %s, birthday: %s, команды: %s", "Осёл", name, birthDay.toString(), String.join(", ", commands));
     }
 }

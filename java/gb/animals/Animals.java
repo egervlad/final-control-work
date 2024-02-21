@@ -6,9 +6,9 @@ import java.util.List;
 
 public abstract class Animals {
 
-    private String name;
-    private List<String> commands;
-    private LocalDate birthDay;
+    protected String name;
+    protected List<String> commands;
+    protected LocalDate birthDay;
     private TypesAnimals typeAnimals;
 
     private static int count;
