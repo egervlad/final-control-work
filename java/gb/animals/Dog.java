@@ -55,6 +55,6 @@ public class Dog extends Pets implements DogCommands {
 
     @Override
     public String toString() {
-        return String.format("%s: %s, birthday: %s, команды: %s", "Собака", getName(), getBirthDay().toString(), String.join(", ", getCommands()));
+        return String.format("%s: %s, birthday: %s, команды: %s", "Собака", name, birthDay.toString(), String.join(", ", commands));
     }
 }

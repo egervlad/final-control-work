@@ -159,6 +159,8 @@ public class RegistryAnimals {
         int num = inputValue(reader);
         try {
             Animals animal = animals.get(num - 1);
+            List<String> possibleCommands = animal.getPossibleCommands();
+            System.out.println("Возможные команды для данного животного: " + String.join(", ", possibleCommands));
             List<String> commands = animal.getCommands();
             System.out.print("Введите команду: ");
             String command = reader.readLine();
